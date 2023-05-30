@@ -204,4 +204,16 @@ return AttackHook(Self, Target, ...) -- // return & call the function with the n
 end)
 end
 end)
+
+spawn(function()
+    while true do wait(2)
+    local args = {[1] = "Only1ThisTime"}
+    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.CodeService.RF.VerifyCode:InvokeServer(unpack(args))
+    wait(1)
+    local args = {[1] = "NormalWheel"}
+    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.WheelService.RF.AttemptSpin:InvokeServer(unpack(args))
+    wait(1)
+    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.DailyRewardService.RF.ClaimReward:InvokeServer()
+    end
+end)
 end)
