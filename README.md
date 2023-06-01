@@ -1,9 +1,9 @@
 getgenv().autocollect = true
 getgenv().autofire = true
-getgenv().autoequipbest = true
 getgenv().autoopennuke = false
 getgenv().autochestdrop = true
 getgenv().autoclainnormalchest = true
+getgenv().T = true
  
 spawn(function()  
 if game.PlaceId == 11599913094 then
@@ -54,17 +54,17 @@ repeat wait() until game:IsLoaded()
     end)
     
     spawn(function()
-        while true do wait(2) if autoequipbest then
-            local equipBestRemote = game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.EquipBest
-            equipBestRemote:FireServer()
-        end end
-    end)
-    
-    spawn(function()
-        while true do wait(10) if autofire then
-            local args = {[1] = true}
-            game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.AutoFarmService.RE.ToggleAutoFarm:FireServer(unpack(args))
-        end end
+        while T == true do wait(0.001)
+        for i,v in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
+            for _,part in pairs(workspace.Nukes:GetChildren()) do 
+                local args = {[1] = {[1] = part.Name},[2] = v.Name}
+                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.Attack:FireServer(unpack(args))
+                wait(0.01)
+                local args = {[1] = part.Name,[2] = v.Name}
+                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
+                end
+            end
+        end
     end)
     
     spawn(function()    
