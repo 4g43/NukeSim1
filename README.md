@@ -53,7 +53,7 @@ repeat wait() until game:IsLoaded()
         end end
     end)
     
-    spawn(function()
+    spawn(function() wait(10)
         while T == true do wait(0.001)
         for i,v in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
             for _,part in pairs(workspace.Nukes:GetChildren()) do 
