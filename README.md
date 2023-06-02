@@ -57,13 +57,11 @@ repeat wait() until game:IsLoaded()
         while T == true do wait(0.001)
         for i,v in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
             for _,part in pairs(workspace.Nukes:GetChildren()) do 
-                while T == true do wait()
                 local args = {[1] = {[1] = part.Name},[2] = v.Name}
                 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.Attack:FireServer(unpack(args))
                 wait(0.01)
                 local args = {[1] = part.Name,[2] = v.Name}
                 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
-				end
 				end
             end
         end
