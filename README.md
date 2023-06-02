@@ -4,6 +4,7 @@ getgenv().autoopennuke = false
 getgenv().autochestdrop = true
 getgenv().autoclainnormalchest = true
 getgenv().T = true
+getgenv().autofire = true
  
 spawn(function()  
 if game.PlaceId == 11599913094 then
@@ -64,6 +65,13 @@ repeat wait() until game:IsLoaded()
                 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
 				end
             end
+        end
+    end)
+    
+    spawn(function()
+        while autofire == true do wait(5)
+            local args = {[1] = true}
+            game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.AutoFarmService.RE.ToggleAutoFarm:FireServer(unpack(args))
         end
     end)
     
