@@ -65,15 +65,6 @@ repeat wait() until game:IsLoaded()
                 wait(0.01)
                 local args = {[1] = part.Name,[2] = v.Name}
                 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
-                wait(0.01)
-                local args = {[1] = {[1] = part.Name},[2] = v.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.Attack:FireServer(unpack(args))
-                wait(0.01)
-                local args = {[1] = part.Name,[2] = v.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
-                wait(0.01)
-                local args = {[1] = part.Name,[2] = v.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
                 end
             end
         end
