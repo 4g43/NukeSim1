@@ -4,7 +4,6 @@ getgenv().autoopennuke = false
 getgenv().autochestdrop = true
 getgenv().autoclainnormalchest = true
 getgenv().X = true
-getgenv().L = true
 getgenv().autofire = true
  
 spawn(function()  
@@ -69,47 +68,8 @@ repeat wait() until game:IsLoaded()
         end
     end)
     
-    spawn(function() wait()
+    spawn(function() wait(10)
         while X == true do wait(0.001)
-        for i,v in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
-            for _,part in pairs(workspace.Nukes:GetChildren()) do 
-		        for _,link in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
-	            for _,object in pairs(workspace.Nukes:GetChildren()) do 
-        	        for _,priv in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
-                    for _,nuke in pairs(workspace.Nukes:GetChildren()) do 
-        		        for _,pig in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
-                        for _,tix in pairs(workspace.Nukes:GetChildren()) do 
-                local args = {[1] = {[1] = part.Name},[2] = v.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.Attack:FireServer(unpack(args))
-                wait(0.00000001)
-                local args = {[1] = part.Name,[2] = v.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
-                wait(0.00000001)
-                local args = {[1] = {[1] = link.Name},[2] = object.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.Attack:FireServer(unpack(args))
-                wait(0.00000001)
-                local args = {[1] = link.Name,[2] = object.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
-                wait(0.00000001)
-                local args = {[1] = {[1] = priv.Name},[2] = nuke.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.Attack:FireServer(unpack(args))
-                wait(0.00000001)
-                local args = {[1] = priv.Name,[2] = nuke.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
-                wait(0.00000001)
-                local args = {[1] = {[1] = pig.Name},[2] = tix.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.Attack:FireServer(unpack(args))
-                wait(0.00000001)
-                local args = {[1] = pig.Name,[2] = tix.Name}
-                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
-                wait(0.00000001)
-				end end end end end end end
-            end
-        end
-    end)
-    
-        spawn(function() wait()
-        while L == true do wait(0.001)
         for i,v in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
             for _,part in pairs(workspace.Nukes:GetChildren()) do 
 		        for _,link in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
