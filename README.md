@@ -4,7 +4,6 @@ getgenv().autoopennuke = false
 getgenv().autochestdrop = true
 getgenv().autoclainnormalchest = true
 getgenv().T = true
-getgenv().autofire = true
  
 spawn(function()  
 if game.PlaceId == 11599913094 then
