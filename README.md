@@ -3,7 +3,7 @@ getgenv().autofire = true
 getgenv().autoopennuke = false
 getgenv().autochestdrop = true
 getgenv().autoclainnormalchest = true
-getgenv().X = true
+getgenv().T = true
 getgenv().autofire = true
  
 spawn(function()  
