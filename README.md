@@ -1,5 +1,5 @@
 getgenv().autocollect = true
-getgenv().autofire = true
+getgenv().autofire = false
 getgenv().autoopennuke = false
 getgenv().autochestdrop = true
 getgenv().autoclainnormalchest = true
