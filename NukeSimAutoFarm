@@ -9,7 +9,6 @@ repeat wait() until game:IsLoaded()
         while true do wait()
             for i,v in pairs(game:GetService("Workspace").CurrencyDrops:GetChildren())do
                 v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                wait()
             end
         end
     end)
