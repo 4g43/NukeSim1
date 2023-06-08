@@ -1,5 +1,4 @@
-getgenv().autocollect = true
-getgenv().autofire = true
+getgenv().T = true
 getgenv().autoclainnormalchest = true
  
 spawn(function()  
@@ -48,11 +47,17 @@ repeat wait() until game:IsLoaded()
             game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.AutoFarmService.RE.ToggleAutoFarm:FireServer(unpack(args))
     end)
     
-    spawn(function()    
-        while true do wait() if autocollect then
-            for i,v in pairs(game:GetService("Workspace").CurrencyDrops:GetChildren())do
-                v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-            end end
+	spawn(function()
+        while T == true do wait()
+        for i,v in pairs(workspace.Buildings["Reaper's Chamber"]:GetChildren()) do
+            for _,part in pairs(workspace.Nukes:GetChildren()) do 
+                local args = {[1] = {[1] = part.Name},[2] = v.Name}
+                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.Attack:FireServer(unpack(args))
+                local args = {[1] = part.Name,[2] = v.Name}
+                game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.NukeService.RE.NukeCollision:FireServer(unpack(args))
+                wait()
+				end
+            end
         end
     end)
 
