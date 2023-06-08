@@ -1,7 +1,6 @@
 getgenv().autocollect = true
 getgenv().autofire = true
 getgenv().autoclainnormalchest = true
-getgenv().autofire = true
  
 spawn(function()  
 if game.PlaceId == 11599913094 then
@@ -49,11 +48,9 @@ repeat wait() until game:IsLoaded()
         end
     end)
     
-    spawn(function()
-        while autofire == true do wait(5)
+    spawn(function() wait(5)
             local args = {[1] = true}
             game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.AutoFarmService.RE.ToggleAutoFarm:FireServer(unpack(args))
-        end
     end)
     
     spawn(function()    
