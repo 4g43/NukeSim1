@@ -22,6 +22,7 @@ repeat wait() until game:IsLoaded()
     
     spawn(function()
         if game.Players.LocalPlayer.UserId == 1514743183 then
+	wait(10)
             getgenv().b = true
                 local CFrame1 = CFrame.new(-2479.28882, 1231.43018, 17234.0938, -0.0799721628, -1.3017095e-08, 0.996797085, -2.22710348e-08, 1, 1.12721352e-08, -0.996797085, -2.12982449e-08, -0.0799721628)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame1
@@ -39,6 +40,7 @@ repeat wait() until game:IsLoaded()
             end)
         end
         if game.Players.LocalPlayer.UserId == 4489402726 then
+	wait(10)
             local CFrame2 = CFrame.new(-2479.28882, 1231.43018, 17234.0938, -0.0799721628, -1.3017095e-08, 0.996797085, -2.22710348e-08, 1, 1.12721352e-08, -0.996797085, -2.12982449e-08, -0.0799721628)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame2
             wait(2)
