@@ -4,7 +4,7 @@ getgenv().autoclainnormalchest = true
 spawn(function()  
 if game.PlaceId == 11599913094 then
 repeat wait() until game:IsLoaded()
-	
+
     spawn(function()    
         while true do wait()
             for i,v in pairs(game:GetService("Workspace").CurrencyDrops:GetChildren())do
@@ -22,7 +22,6 @@ repeat wait() until game:IsLoaded()
     
     spawn(function()
         if game.Players.LocalPlayer.UserId == 1514743183 then
-	wait(10)
             getgenv().b = true
                 local CFrame1 = CFrame.new(-2479.28882, 1231.43018, 17234.0938, -0.0799721628, -1.3017095e-08, 0.996797085, -2.22710348e-08, 1, 1.12721352e-08, -0.996797085, -2.12982449e-08, -0.0799721628)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame1
@@ -40,7 +39,6 @@ repeat wait() until game:IsLoaded()
             end)
         end
         if game.Players.LocalPlayer.UserId == 4489402726 then
-	wait(10)
             local CFrame2 = CFrame.new(-2479.28882, 1231.43018, 17234.0938, -0.0799721628, -1.3017095e-08, 0.996797085, -2.22710348e-08, 1, 1.12721352e-08, -0.996797085, -2.12982449e-08, -0.0799721628)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame2
             wait(2)
@@ -130,12 +128,10 @@ end)
 end)
 
 	spawn(function()
-	wait(3600)
-		local Http = game:GetService("HttpService") 
-		local TPS = game:GetService("TeleportService") local Api = "https://games.roblox.com/v1/games/" 
-		local _place = game.PlaceId local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100" function ListServers(cursor) 
-		local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or "")) return Http:JSONDecode(Raw) end
-		local Server, Next; repeat local Servers = ListServers(Next) Server = Servers.data[1] Next = Servers.nextPageCursor until Server TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+        wait(3600)
+        local tpservice = game:GetService("TeleportService")
+        local plr = game.Players.LocalPlayer
+        tpservice:Teleport(game.PlaceId, plr)
 	end)
 
 end
