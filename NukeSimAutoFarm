@@ -1,4 +1,4 @@
-getgenv().T = false
+getgenv().T = true
 getgenv().autoclainnormalchest = true
  
 spawn(function()  
