@@ -4,7 +4,7 @@ getgenv().autoclainnormalchest = true
 spawn(function()  
 if game.PlaceId == 11599913094 then
 repeat wait() until game:IsLoaded()
-	
+
     spawn(function()    
         while true do wait()
             for i,v in pairs(game:GetService("Workspace").CurrencyDrops:GetChildren())do
