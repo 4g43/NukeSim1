@@ -130,7 +130,7 @@ end)
 	spawn(function()
     if game.Players.LocalPlayer.UserId == 4489402726 then print("nukesimaccalt50")
     else
-        print("rejoining in 1 hour")
+        print("rejoining in 1 hour and 30 minutes")
         wait(5400)
         local tpservice = game:GetService("TeleportService")
         local plr = game.Players.LocalPlayer
